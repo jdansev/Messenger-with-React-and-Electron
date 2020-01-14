@@ -73,4 +73,7 @@ window.onload = function () {
         });
     }
     /*End Dropdown Menu*/
+    $('.app__top-bar .menu__btn').click(function () {
+        menuManager.showMenu();
+    });
 };

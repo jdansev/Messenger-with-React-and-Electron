@@ -63,7 +63,7 @@
 
 <body>
 
-	<div id="root" class="app__menu">
+	<div class="app__menu">
 
 		<div class="app__menu__top">
 			<div style="float: left" class="app__menu__top--options">
@@ -207,49 +207,13 @@
 
 	</div>
 
-	<div class="menu__dim"></div>
+  <div class="menu__dim"></div>
+  
 
-	<div class="app__container">
 
-		<!-- Top bar -->
-		<div class="app__top-bar">
-			<div class="menu__btn" onclick="menuManager.showMenu()">
-				<img class="menu__btn--light" src="images/menu-btn-light.png">
-				<img class="menu__btn--dark" src="images/menu-btn-dark.png">
-			</div>
-		</div>
+  <div id="app__container"></div>
+  
 
-		<!-- Message Feed -->
-		<div class="app__message-feed">
-			<div class="messages__container"></div>
-			<div class="scroll__container">
-				<div class="scroll__view"></div>
-			</div>
-		</div>
-
-		<!-- Message Input -->
-		<div class="app__message-input">
-
-			<input id="message-input" type="text" placeholder="TYP." spellcheck="false">
-			
-			<!-- <div class="emoji-picker">
-				<button class="emoji-icon"></button>
-      </div> -->
-      
-      <!-- <div id="emoji-picker"></div> -->
-			<button class="emoji-picker">
-				<div class="emoji-icon"></div>
-			</button>
-
-			<div class="btn__send-wrapper">
-				<div class="btn__send">
-					<div class="send__inner"></div>
-				</div>
-			</div>
-
-		</div>
-
-	</div>
 
 	<!-- Insert these lines above script imports  -->
 	<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
