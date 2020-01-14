@@ -4,7 +4,7 @@
   "private": true,
   "devDependencies": {
     "electron": "^1.7.9",
-    "foreman": "^2.0.0",
+    "foreman": "^3.0.1",
     "react-scripts": "0.8.5",
     "tslint": "^5.20.1",
     "typescript": "^3.7.4"
