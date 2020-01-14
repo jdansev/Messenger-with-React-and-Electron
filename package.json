@@ -10,9 +10,11 @@
     "typescript": "^3.7.4"
   },
   "dependencies": {
+    "@types/jquery": "^3.3.31",
+    "open": ">=6.0.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "open": ">=6.0.0"
+    "rxjs": "^6.5.4"
   },
   "homepage": "./",
   "main": "src/electron-starter.js",

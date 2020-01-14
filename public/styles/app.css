@@ -1,0 +1,283 @@
+
+/* Fonts */
+@font-face {
+    font-family: "League Gothic";
+    src: url("../fonts/LeagueGothic-Regular.otf");
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url("../fonts/WorkSans-Regular.ttf");
+}
+
+
+/* App containers */
+html, body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.app__container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+
+/* Title bar */
+.app__top-bar {
+    -webkit-app-region: drag;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: gray;
+    background-color: white;
+    border-bottom: 1px solid #e3e3e3;
+    box-shadow: 0px 0px 8px lightgray;
+}
+
+
+/* Message Feed */
+.app__message-feed {
+    width: 100%;
+    background: white;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    position: relative;
+    flex: 1;
+}
+
+.messages__container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.scroll__container {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.scroll__view {
+    width: 100%;
+    z-index: 1;
+}
+
+
+/* Messages */
+.message-container {
+    width: 100%;
+}
+.to { text-align: left; }
+.from { text-align: right; }
+
+.user-tag {
+    color: #8a8a8a;
+    padding: 10px 12px 4px 12px;
+    font-size: 11px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.message {
+    font-family: Arial;
+    font-size: 14px;
+    text-align: left;
+    color: white;
+    background-color: lightgray;
+    max-width: 60%;
+    margin: 2px 10px 2px 10px;
+    padding: 5px 8px 5px 8px;
+    border-radius: 0.2em;
+    display: inline-block;
+    overflow-wrap: break-word;
+}
+
+
+/* Message Input */
+input::-webkit-input-placeholder {
+    color: #e3e3e3 !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; letter-spacing: 0.6px;
+}
+
+input:-moz-placeholder {
+    color: #e3e3e3 !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.6px;
+}
+
+input::-moz-placeholder {
+    color: #e3e3e3 !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.6px;
+}
+
+input:-ms-input-placeholder {
+    color: #e3e3e3 !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.6px;
+}
+
+.app__message-input {
+    display: flex;
+    padding: 12px 12px 12px 20px;
+    border-top: 1px solid #e3e3e3;
+    background-color: white;
+}
+
+#message-input {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    background: transparent;
+    border: none;
+    padding-right: 8px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    outline: none;
+    caret-color: #1abc9c;
+}
+
+
+/* Send Button */
+.btn__send-wrapper {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+}
+
+.btn__send {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.send__inner {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    -webkit-mask: url('../images/send-btn.svg');
+    mask: url('../images/send-btn.svg');
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    transform: rotate(0deg);
+    -webkit-transition: transform 0.2s;
+    transition: transform 0.2;
+}
+
+.ready {
+    transform: rotate(-90deg);
+    -webkit-transition: transform 0.2s;
+    transition: transform 0.2;
+    cursor: pointer;
+}
+
+
+/* Menu */
+.menu__dim {
+    position: fixed;
+    display: none;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1 !important;
+    background-color: black;
+    opacity: 0;
+}
+
+.app__menu {
+    position: fixed;
+    height: 100%;
+    width: 350px;
+    z-index: 2 !important;
+    border: none;
+    background-color: #eee;
+    /* background-image: url(data:image/gif;base64,R0lGODlhCAAIAJEAAMzMzP///////wAAACH5BAEHAAIALAAAAAAIAAgAAAINhG4nudroGJBRsYcxKAA7); */
+    right: -400px;
+    padding: 10px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+.menu__btn {
+    position: absolute;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    right: 0;
+    margin: 10px;
+}
+
+.menu__btn img {
+    position: absolute;
+    height: 18px;
+    width: 28px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.menu__btn--dark {
+    clip: rect(0px,3px,20px,0px);
+    -webkit-transition: clip 0.4s;
+    transition: clip 0.4s;
+}
+
+.menu__btn:hover .menu__btn--dark {
+    clip: rect(0px,30px,20px,0px);
+    -webkit-transition: clip 0.4s; /* Safari */
+    transition: clip 0.4s;
+}
+
+/* hides scrollbars */
+::-webkit-scrollbar { display: none; }
+
+
+/* Hub Tab */
+.tab__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.tab--title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Create Hub Button (+) */
+#create-hub {
+    font-weight: bold;
+    float: right;
+    padding: 5px;
+    font-size: 26px;
+    color: gray;
+    transition: 0.1s all;
+}
+
+#create-hub:hover {
+    cursor: pointer;
+    color: black;
+    transition: 0.2s all;
+}
+
+
+

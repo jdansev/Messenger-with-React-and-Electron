@@ -16,9 +16,9 @@ function createWindow() {
     mainWindow = new BrowserWindow({
         width: 500,
         height: 500,
-        // titleBarStyle: 'hiddenInset',
-        // resizable: true,
-        // transparent: true,
+        titleBarStyle: 'hiddenInset',
+        resizable: true,
+        transparent: true,
         webPreferences: {
             nodeIntegration: true
         }
