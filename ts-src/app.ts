@@ -107,6 +107,10 @@ window.onload = function() {
         menuManager.showMenu();
     });
 
+    $('#create-hub-form').on('submit', (event) => {
+        return goManager.createHub(event);
+    });
+
 }
 
 

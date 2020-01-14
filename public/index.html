@@ -61,9 +61,9 @@
 
 <body>
 
-  <div class="app__menu">
+  <div id="app__menu">
 
-    <div class="app__menu__top">
+    <!-- <div class="app__menu__top">
       <div style="float: left" class="app__menu__top--options">
         <span class="option">Profile</span>
       </div>
@@ -115,20 +115,15 @@
           </div>
 
           <div class="results-count"></div>
-
           <div id="list__hubs" class="tab__list"></div>
 
         </div>
 
 
         <div name="hub-info" class="page__hub-info">
-
           <span class="tab--title">About this Hub</span>
-
           <div id="hub-info-name"></div>
-
           <div id="hub-info-members"></div>
-
         </div>
 
 
@@ -138,11 +133,8 @@
 
           <form onsubmit="return goManager.createHub(event)" id="create-hub-form" action="">
 
-            <!-- Input -->
             <input id="hub-name" name="hub-name" type="text" placeholder="Name">
 
-
-            <!-- Radio -->
             <div class="radio-group">
               <div class="radio-pair">
                 <input type="radio" id="public" name="hub-visibility" checked>
@@ -160,10 +152,6 @@
               </div>
             </div>
 
-
-
-
-            <!-- Dropdown -->
             <div class="dropdown__container">
 
               <div class="dropdown">
@@ -171,27 +159,13 @@
                   <span>Spectrum</span>
                 </div>
                 <input type="hidden" name="gender">
-                <ul class="dropdown-menu">
-                  <!-- dynamically populated -->
-                </ul>
+                <ul class="dropdown-menu"></ul>
               </div>
             </div>
-
-
-
 
             <button type="submit" class="typ__btn">Create</button>
 
           </form>
-
-
-
-
-
-          <!-- <h3 for="">Name</h3>
-					<input type="text">
-					<h3 for="">Visibility</h3> -->
-
         </div>
 
 
@@ -208,7 +182,7 @@
         </div>
 
       </div>
-    </div>
+    </div> -->
 
   </div>
 

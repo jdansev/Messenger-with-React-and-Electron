@@ -76,4 +76,7 @@ window.onload = function () {
     $('.app__top-bar .menu__btn').click(function () {
         menuManager.showMenu();
     });
+    $('#create-hub-form').on('submit', function (event) {
+        return goManager.createHub(event);
+    });
 };

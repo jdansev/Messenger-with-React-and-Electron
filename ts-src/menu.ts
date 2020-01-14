@@ -12,7 +12,7 @@ class MenuManager {
 
         self.group_container = $( '.groups__container' );
         self.message_input = $( '#message-input' );
-        self.menu_div = $( '.app__menu' );
+        self.menu_div = $( '#app__menu' );
         self.dim = $( '.menu__dim' );
         self.group_item = $( '.group' );
 
