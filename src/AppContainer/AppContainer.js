@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import MessageInputBar from './MessageInputBar/MessageInputBar';
 
 
+
+
+
 const TopBar = () => {
     return (
         <div className="app__top-bar">
@@ -31,6 +34,9 @@ const MessageFeed = () => {
 class AppContainer extends Component {
     render() {
         return (
+            /* Avoid extra wrapping <div> in React
+            - https://stackoverflow.com/questions/33766085/how-to-avoid-extra-wrapping-div-in-react
+            */
             <React.Fragment>
                 <TopBar />
                 <MessageFeed />
@@ -38,8 +44,10 @@ class AppContainer extends Component {
             </React.Fragment>
         );
     }
-    
 }
 
 
 export default AppContainer
+
+
+

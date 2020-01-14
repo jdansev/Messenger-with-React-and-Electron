@@ -1,260 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <meta charset="UTF-8">
-  
-	<title>Home</title>
 
-	<!-- Styles -->
-	<link rel="stylesheet" href="styles/app.css">
-	<link rel="stylesheet" href="styles/tabs.css">
-	<link rel="stylesheet" href="styles/form-elements.css">
-	<link rel="stylesheet" href="styles/emoji-picker.css">
-	<link rel="stylesheet" href="styles/alert-badge.css">
-	<link rel="stylesheet" href="styles/jquery.lsxemojipicker.css">
-	<link rel="stylesheet" href="styles/menu-elements.css">
+  <title>Home</title>
 
-	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/app.css">
+  <link rel="stylesheet" href="styles/tabs.css">
+  <link rel="stylesheet" href="styles/form-elements.css">
+  <link rel="stylesheet" href="styles/emoji-picker.css">
+  <link rel="stylesheet" href="styles/alert-badge.css">
+  <link rel="stylesheet" href="styles/jquery.lsxemojipicker.css">
+  <link rel="stylesheet" href="styles/menu-elements.css">
 
-	<style>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-		.app__menu__top {
-			font-family: 'Roboto', sans-serif;
-			font-size: 12px;
-			margin-bottom: 10px;
-			float: right;
-		}
+  <style>
+    .app__menu__top {
+      font-family: 'Roboto', sans-serif;
+      font-size: 12px;
+      margin-bottom: 10px;
+      float: right;
+    }
 
-		.results-count {
-			font-family: 'Roboto', sans-serif;
-			color: dimgray;
-			font-size: 14px;
-			margin-bottom: 10px;
-		}
+    .results-count {
+      font-family: 'Roboto', sans-serif;
+      color: dimgray;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
 
-		.app__menu__top {
-			font-family: 'Roboto', sans-serif;
-			font-size: 12px;
-			color: #3d3d3d; /* baltic sea */
-			display: block;
-			width: 100%;
-			/* border: 1px solid #000; */
-			margin-bottom: 15px;
-		}
+    .app__menu__top {
+      font-family: 'Roboto', sans-serif;
+      font-size: 12px;
+      color: #3d3d3d;
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+    }
 
-		.app__menu__top--options {
-			float: right;
-		}
+    .app__menu__top--options {
+      float: right;
+    }
 
-		.app__menu__top--options .option {
-			margin: 0 5px;
-		}
+    .app__menu__top--options .option {
+      margin: 0 5px;
+    }
 
-		.app__menu__top--options .option:hover {
-			cursor: pointer;
-			color: gray;
-		}
-
-	</style>
+    .app__menu__top--options .option:hover {
+      cursor: pointer;
+      color: gray;
+    }
+  </style>
 
 </head>
 
 <body>
 
-	<div class="app__menu">
+  <div class="app__menu">
 
-		<div class="app__menu__top">
-			<div style="float: left" class="app__menu__top--options">
-				<span class="option">Profile</span>
-			</div>
-			<div style="float: right" class="app__menu__top--options">
-				<span class="option">Settings</span> | 
-				<span class="option">Logout</span>
-			</div>
-		</div>
+    <div class="app__menu__top">
+      <div style="float: left" class="app__menu__top--options">
+        <span class="option">Profile</span>
+      </div>
+      <div style="float: right" class="app__menu__top--options">
+        <span class="option">Settings</span> |
+        <span class="option">Logout</span>
+      </div>
+    </div>
 
-		<ul class="clearfix" id="tabs">
-			<li><a href="#" name="#tab__hubs">Hubs</a><div id="hub-alert-badge" class="alert-badge"></div></li>
-			<li><a href="#" name="#tab__people">People</a><div id="people-alert-badge" class="alert-badge"></div></li>
-			<li><a href="#" name="#tab__notifications">Notifications</a><div id="notification-alert-badge" class="alert-badge"></div></li>
-		</ul>
+    <ul class="clearfix" id="tabs">
+      <li><a href="#" name="#tab__hubs">Hubs</a>
+        <div id="hub-alert-badge" class="alert-badge"></div>
+      </li>
+      <li><a href="#" name="#tab__people">People</a>
+        <div id="people-alert-badge" class="alert-badge"></div>
+      </li>
+      <li><a href="#" name="#tab__notifications">Notifications</a>
+        <div id="notification-alert-badge" class="alert-badge"></div>
+      </li>
+    </ul>
 
-		<div id="tab__content">
+    <div id="tab__content">
 
-			<div id="tab__people">
+      <div id="tab__people">
 
-				<img src="images/search-icon.svg" class="search-icon"> <input class="search-bar" id="user-search" type="text">
+        <img src="images/search-icon.svg" class="search-icon"> <input class="search-bar" id="user-search" type="text">
 
-				<div class="tab__head">
-					<span id="friends__title" class="tab--title">Your Friends</span>
-				</div>
+        <div class="tab__head">
+          <span id="friends__title" class="tab--title">Your Friends</span>
+        </div>
 
-				<div class="results-count"></div>
+        <div class="results-count"></div>
 
-				<div id="list__friends" class="tab__list"></div>
-				
-			</div>
+        <div id="list__friends" class="tab__list"></div>
 
-			<div id="tab__hubs">
+      </div>
 
-
-				<div name="hub-main" class="page__hub-main">
-
-					<img src="images/search-icon.svg" class="search-icon"> <input id="hub-search" class="search-bar" value="" type="text">
-
-					<div class="tab__head">
-						<span id="hubs__title" class="tab--title">Your Hubs</span>
-						<span id="create-hub">+</span>
-					</div>
-	
-					<div class="results-count"></div>
-	
-					<div id="list__hubs" class="tab__list"></div>
-
-				</div>
+      <div id="tab__hubs">
 
 
-				<div name="hub-info" class="page__hub-info">
+        <div name="hub-main" class="page__hub-main">
 
-						<span class="tab--title">About this Hub</span>
+          <img src="images/search-icon.svg" class="search-icon"> <input id="hub-search" class="search-bar" value=""
+            type="text">
 
-						<div id="hub-info-name"></div>
+          <div class="tab__head">
+            <span id="hubs__title" class="tab--title">Your Hubs</span>
+            <span id="create-hub">+</span>
+          </div>
 
-						<div id="hub-info-members"></div>
+          <div class="results-count"></div>
 
-				</div>
+          <div id="list__hubs" class="tab__list"></div>
 
-
-				<div name="create-hub" class="page__create-hub">
-
-					<span class="tab--title">Create a Hub</span>
-
-					<form onsubmit="return goManager.createHub(event)" id="create-hub-form" action="">
-
-						<!-- Input -->
-						<input id="hub-name" name="hub-name" type="text" placeholder="Name">
+        </div>
 
 
-						<!-- Radio -->
-						<div class="radio-group">
-							<div class="radio-pair">
-								<input type="radio" id="public" name="hub-visibility" checked>
-								<label for="public">public</label>
-							</div>
-		
-							<div class="radio-pair">
-								<input type="radio" id="private" name="hub-visibility">
-								<label for="private">private</label>
-							</div>
-		
-							<div class="radio-pair">
-								<input type="radio" id="secret" name="hub-visibility">
-								<label for="secret">secret</label>
-							</div>
-						</div>
+        <div name="hub-info" class="page__hub-info">
+
+          <span class="tab--title">About this Hub</span>
+
+          <div id="hub-info-name"></div>
+
+          <div id="hub-info-members"></div>
+
+        </div>
 
 
+        <div name="create-hub" class="page__create-hub">
+
+          <span class="tab--title">Create a Hub</span>
+
+          <form onsubmit="return goManager.createHub(event)" id="create-hub-form" action="">
+
+            <!-- Input -->
+            <input id="hub-name" name="hub-name" type="text" placeholder="Name">
 
 
-						<!-- Dropdown -->
-						<div class="dropdown__container">
-							
-								<div class="dropdown">
-									<div class="select">
-										<span>Spectrum</span>
-									</div>
-									<input type="hidden" name="gender">
-									<ul class="dropdown-menu">
-										<!-- dynamically populated -->
-									</ul>
-								</div>
-						</div>
+            <!-- Radio -->
+            <div class="radio-group">
+              <div class="radio-pair">
+                <input type="radio" id="public" name="hub-visibility" checked>
+                <label for="public">public</label>
+              </div>
+
+              <div class="radio-pair">
+                <input type="radio" id="private" name="hub-visibility">
+                <label for="private">private</label>
+              </div>
+
+              <div class="radio-pair">
+                <input type="radio" id="secret" name="hub-visibility">
+                <label for="secret">secret</label>
+              </div>
+            </div>
 
 
 
 
-						<button type="submit" class="typ__btn">Create</button>
+            <!-- Dropdown -->
+            <div class="dropdown__container">
 
-					</form>
-					
+              <div class="dropdown">
+                <div class="select">
+                  <span>Spectrum</span>
+                </div>
+                <input type="hidden" name="gender">
+                <ul class="dropdown-menu">
+                  <!-- dynamically populated -->
+                </ul>
+              </div>
+            </div>
 
-					
 
 
-					<!-- <h3 for="">Name</h3>
+
+            <button type="submit" class="typ__btn">Create</button>
+
+          </form>
+
+
+
+
+
+          <!-- <h3 for="">Name</h3>
 					<input type="text">
 					<h3 for="">Visibility</h3> -->
 
-				</div>
-				
+        </div>
 
-			</div>
-			<div id="tab__notifications">
-				<span class="tab--title">Notifications</span>
 
-				<div id="list__notifications" class="tab__list">
+      </div>
+      <div id="tab__notifications">
+        <span class="tab--title">Notifications</span>
 
-					<div class="list__item">
-						<div class="item--name">John accepted your friend request</div>
-					</div>
-					
-				</div>
+        <div id="list__notifications" class="tab__list">
 
-			</div>
-		</div>
+          <div class="list__item">
+            <div class="item--name">John accepted your friend request</div>
+          </div>
 
-	</div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
 
   <div class="menu__dim"></div>
-  
+
 
 
   <div id="app__container"></div>
-  
 
 
-	<!-- Insert these lines above script imports  -->
-	<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
-	<script>if (window.module) module = window.module;</script>
 
-	<!-- React and JSX -->
+  <!-- Insert these lines above script imports  -->
+  <script>
+    if (typeof module === 'object') {
+      window.module = module;
+      module = undefined;
+    }
+    if (window.module) module = window.module;
+  </script>
 
+  <!-- JQuery -->
+  <script src="js/jquery-3.2.1.min.js"></script>
 
-	<!-- JQuery -->
-	<script src="js/jquery-3.2.1.min.js"></script>
+  <!-- JDenticon -->
+  <script type="text/javascript" src="js/jdenticon-2.1.0.min.js"></script>
+  <script>
+    window.jdenticon_config = {
+      replaceMode: "observe"
+    };
+  </script>
 
-	<!-- JDenticon -->
-	<script type="text/javascript" src="js/jdenticon-2.1.0.min.js"></script>
-	<script>
-		window.jdenticon_config = {
-			replaceMode: "observe"
-		};
-	</script>
+  <!-- Twemoji JS -->
+  <script src="js/twemoji.min.js"></script>
+  <script src="js/jquery.lsxemojipicker.js"></script>
 
-	<!-- Twemoji JS -->
-	<script src="js/twemoji.min.js"></script>
-	<script src="js/jquery.lsxemojipicker.js"></script>
+  <!-- Scripts -->
+  <script src="ts-built/go-models.js"></script>
+  <script src="ts-built/go-api.js"></script>
+  <script src="ts-built/app.js"></script>
+  <script src="ts-built/color-fade.js"></script>
+  <script src="ts-built/fluid-motion.js"></script>
+  <script src="ts-built/gradient-factory.js"></script>
+  <script src="ts-built/menu.js"></script>
+  <script src="ts-built/messages.js"></script>
+  <script src="ts-built/tabs.js"></script>
+  <script src="ts-built/notifications.js"></script>
+  <script src="ts-built/emoji-picker.js"></script>
 
-	<!-- Scripts -->
-	<script src="ts-built/go-models.js"></script>
-	<script src="ts-built/go-api.js"></script>
-	<script src="ts-built/app.js"></script>
-	<script src="ts-built/color-fade.js"></script>
-	<script src="ts-built/fluid-motion.js"></script>
-	<script src="ts-built/gradient-factory.js"></script>
-	<script src="ts-built/menu.js"></script>
-	<script src="ts-built/messages.js"></script>
-	<script src="ts-built/tabs.js"></script>
-	<script src="ts-built/notifications.js"></script>
-	<script src="ts-built/emoji-picker.js"></script>
-
-	<script>
-
-		
-	</script>
-
-	
 </body>
+
 </html>
