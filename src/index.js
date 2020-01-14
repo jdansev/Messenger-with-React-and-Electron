@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom';
 
 import './index.css';
 
-import Menu from './Menu/Menu';
+import App from './App';
 import AppContainer from './AppContainer/AppContainer';
 
 ReactDOM.render(
-  <Menu />,
-  document.getElementById('app__menu')
+  <App />,
+  document.getElementById('root')
 );
 
 
-ReactDOM.render(
-  <AppContainer />,
-  document.getElementById('app__container')
-);
+// ReactDOM.render(
+//   <AppContainer />,
+//   document.getElementById('app__container')
+// );

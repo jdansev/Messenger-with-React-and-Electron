@@ -40,18 +40,20 @@ class RadioButtonGroup extends Component {
 
 class Menu extends Component {
     render() {
+
         const floatLeftStyle = {
             float: 'left',
         };
         const floatRightStyle = {
             float: 'right',
         }
+
         return (
 
 
 
             /* Begin App Menu */
-            <React.Fragment>
+            <div id='app__menu'>
 
 
                 {/* Begin Top Menu */}
@@ -206,10 +208,8 @@ class Menu extends Component {
                 </div>
 
 
-            </React.Fragment>
+            </div>
             /* End App Menu */
-
-
 
 
         );

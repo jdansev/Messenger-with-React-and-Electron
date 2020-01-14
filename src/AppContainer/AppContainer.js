@@ -37,11 +37,14 @@ class AppContainer extends Component {
             /* Avoid extra wrapping <div> in React
             - https://stackoverflow.com/questions/33766085/how-to-avoid-extra-wrapping-div-in-react
             */
-            <React.Fragment>
-                <TopBar />
-                <MessageFeed />
-                <MessageInputBar />
-            </React.Fragment>
+           <div id='app__container'>
+               <React.Fragment>
+                    <TopBar />
+                    <MessageFeed />
+                    <MessageInputBar />
+                </React.Fragment>
+           </div>
+            
         );
     }
 }
