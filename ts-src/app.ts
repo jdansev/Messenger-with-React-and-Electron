@@ -89,18 +89,19 @@ window.onload = function() {
         $(this).find('.dropdown-menu').slideUp(200);
     });
 
-    for (var color in spectrum) {
-        var l = $('<li/>');
-        l.append(color);
-        $('.dropdown .dropdown-menu').append(l);
-        l.data('Spectrum', spectrum[color]);
-        l.click(function() {
-            $(this).parents('.dropdown').find('span').text($(this).text());
-            $(this).parents('.dropdown').find('span').data('Spectrum', $(this).data('Spectrum'));
-            $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
-            console.log($(this).data('Spectrum'));
-        });
-    }
+    // for (var color in spectrum) {
+    //     var l = $('<li/>');
+    //     l.append(color);
+    //     $('.dropdown .dropdown-menu').append(l);
+    //     l.data('Spectrum', spectrum[color]);
+    //     l.click(function() {
+    //         $(this).parents('.dropdown').find('span').text($(this).text());
+    //         $(this).parents('.dropdown').find('span').data('Spectrum', $(this).data('Spectrum'));
+    //         $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
+    //         console.log($(this).data('Spectrum'));
+    //     });
+    // }
+
     /*End Dropdown Menu*/
 
     $('.app__top-bar .menu__btn').click(function() {

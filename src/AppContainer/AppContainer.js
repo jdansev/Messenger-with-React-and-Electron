@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-
 import MessageInputBar from './MessageInputBar/MessageInputBar';
-
-
-
 
 
 const TopBar = () => {
@@ -28,10 +24,7 @@ const MessageFeed = () => {
     );
 }
 
-
-
-
-class AppContainer extends Component {
+export default class AppContainer extends Component {
     render() {
         return (
             /* Avoid extra wrapping <div> in React
@@ -48,9 +41,3 @@ class AppContainer extends Component {
         );
     }
 }
-
-
-export default AppContainer
-
-
-

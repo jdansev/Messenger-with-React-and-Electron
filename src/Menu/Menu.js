@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import SpectrumDropdown from './SpectrumDropdown/SpectrumDropdown';
 
 
 
@@ -15,41 +16,44 @@ const RadioButton = (props) => {
 
 // TODO: Convert this radio group into a reusable, stylable component
 class RadioButtonGroup extends Component {
+
     state = {
-        hubStatus: 'public',
+        hubStatus: 'public'
     };
+
     radioChangeHandler = (event) => {
         console.log(event.target);
     }
+
     render() {
+
         const publicStatus = 'public';
         const privateStatus = 'private';
         const secretStatus = 'secret';
+
         return (
-            <React.Fragment>
+            <div className="radio-group">
                 <RadioButton changed={this.radioChangeHandler} label={publicStatus} id={publicStatus}/>
                 <RadioButton changed={this.radioChangeHandler} label={privateStatus} id={privateStatus}/>
                 <RadioButton changed={this.radioChangeHandler} label={secretStatus} id={secretStatus}/>
-            </React.Fragment>
+            </div>
         );
     }
+
 }
 
 
 
 
-class Menu extends Component {
+export default class Menu extends Component {
+    floatLeftStyle = {
+        float: 'left',
+    };
+    floatRightStyle = {
+        float: 'right',
+    }
     render() {
-
-        const floatLeftStyle = {
-            float: 'left',
-        };
-        const floatRightStyle = {
-            float: 'right',
-        }
-
         return (
-
 
 
             /* Begin App Menu */
@@ -59,17 +63,16 @@ class Menu extends Component {
                 {/* Begin Top Menu */}
                 <div className="app__menu__top">
                     {/* TODO: fix inline-styles */}
-                    <div style={floatLeftStyle} className="app__menu__top--options">
+                    <div style={this.floatLeftStyle} className="app__menu__top--options">
                         <span className="option">Profile</span>
                     </div>
                     {/* TODO: fix inline-styles */}
-                    <div style={floatRightStyle} className="app__menu__top--options">
+                    <div style={this.floatRightStyle} className="app__menu__top--options">
                         <span className="option">Settings</span> |
                         <span className="option">Logout</span>
                     </div>
                 </div>
                 {/* End Top Menu */}
-
 
 
                 {/* Begin Tab Bar */}
@@ -85,7 +88,6 @@ class Menu extends Component {
                     </li>
                 </ul>
                 {/* End Tab Bar */}
-
 
 
                 {/* Begin Content Tab */}
@@ -109,11 +111,8 @@ class Menu extends Component {
                     {/* End People Tab */}
 
 
-
-
                     {/* Begin Hubs Tab */}
                     <div id="tab__hubs">
-
 
 
                         {/* Begin Main Hub Page */}
@@ -134,7 +133,6 @@ class Menu extends Component {
                         {/* End Main Hub Page */}
 
 
-
                         {/* Begin Hub Info Page */}
                         <div name="hub-info" className="page__hub-info">
                             <span className="tab--title">About this Hub</span>
@@ -144,41 +142,17 @@ class Menu extends Component {
                         {/* End Hub Info Page */}
 
 
-
-
                         {/* Begin Create Hub Page */}
                         <div name="create-hub" className="page__create-hub">
                             <span className="tab--title">Create a Hub</span>
 
-
                             <form id="create-hub-form">
-
                                 <input id="hub-name" name="hub-name" type="text" placeholder="Name" />
 
-                                <div className="radio-group">
-                                    <RadioButtonGroup />
-                                </div>
-
-
-                                {/* Begin Dropdown Container */}
-                                <div className="dropdown__container">
-                                    <div className="dropdown">
-
-                                        <div className="select">
-                                            <span>Spectrum</span>
-                                        </div>
-
-                                        <input type="hidden" name="gender" />
-
-                                        <ul className="dropdown-menu"></ul>
-                                        
-                                    </div>
-                                </div>
-                                {/* End Dropdown Container */}
-
+                                <RadioButtonGroup />
+                                <SpectrumDropdown />
 
                                 <button type="submit" className="typ__btn">Create</button>
-
                             </form>
 
 
@@ -189,7 +163,6 @@ class Menu extends Component {
                     </div>
                     {/* End Hubs Tab */}
                     
-
 
                     {/* Begin Notifications Tab */}
                     <div id="tab__notifications">
@@ -211,13 +184,7 @@ class Menu extends Component {
             </div>
             /* End App Menu */
 
-
         );
     }
 }
 
-
-
-
-
-export default Menu;

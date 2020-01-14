@@ -1,105 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
+    <meta charset="UTF-8">
+    
 
-  <meta charset="UTF-8">
+    <title>TYP Messenger</title>
 
-  <title>Home</title>
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles/app.css">
-  <link rel="stylesheet" href="styles/tabs.css">
-  <link rel="stylesheet" href="styles/form-elements.css">
-  <link rel="stylesheet" href="styles/emoji-picker.css">
-  <link rel="stylesheet" href="styles/alert-badge.css">
-  <link rel="stylesheet" href="styles/jquery.lsxemojipicker.css">
-  <link rel="stylesheet" href="styles/menu-elements.css">
+    <!-- TODO: Find out if Webpack can bundle css -->
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="styles/tabs.css">
+    <link rel="stylesheet" href="styles/form-elements.css">
+    <link rel="stylesheet" href="styles/emoji-picker.css">
+    <link rel="stylesheet" href="styles/alert-badge.css">
+    <link rel="stylesheet" href="styles/jquery.lsxemojipicker.css">
+    <link rel="stylesheet" href="styles/menu-elements.css">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-  <style>
-    .app__menu__top {
-      font-family: 'Roboto', sans-serif;
-      font-size: 12px;
-      margin-bottom: 10px;
-      float: right;
-    }
+    <!-- TODO: Check if this is used, move into the proper css file -->
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    .results-count {
-      font-family: 'Roboto', sans-serif;
-      color: dimgray;
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
 
-    .app__menu__top {
-      font-family: 'Roboto', sans-serif;
-      font-size: 12px;
-      color: #3d3d3d;
-      display: block;
-      width: 100%;
-      margin-bottom: 15px;
-    }
+    <!-- TODO: Move these styles into their respective React components -->
+    <style>
+      .app__menu__top {
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        margin-bottom: 10px;
+        float: right;
+      }
 
-    .app__menu__top--options {
-      float: right;
-    }
+      .results-count {
+        font-family: 'Roboto', sans-serif;
+        color: dimgray;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
 
-    .app__menu__top--options .option {
-      margin: 0 5px;
-    }
+      .app__menu__top {
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        color: #3d3d3d;
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+      }
 
-    .app__menu__top--options .option:hover {
-      cursor: pointer;
-      color: gray;
-    }
-  </style>
+      .app__menu__top--options {
+        float: right;
+      }
 
-</head>
+      .app__menu__top--options .option {
+        margin: 0 5px;
+      }
 
-<body>
+      .app__menu__top--options .option:hover {
+        cursor: pointer;
+        color: gray;
+      }
+    </style>
 
-  <div id="root"></div>
+  </head>
 
-  <!-- Insert these lines above script imports  -->
-  <script>
-    if (typeof module === 'object') {
-      window.module = module;
-      module = undefined;
-    }
-    if (window.module) module = window.module;
-  </script>
 
-  <!-- JQuery -->
-  <script src="js/jquery-3.2.1.min.js"></script>
+  <body>
 
-  <!-- JDenticon -->
-  <script type="text/javascript" src="js/jdenticon-2.1.0.min.js"></script>
-  <script>
-    window.jdenticon_config = {
-      replaceMode: "observe"
-    };
-  </script>
+    <div id="root"></div>
 
-  <!-- Twemoji JS -->
-  <script src="js/twemoji.min.js"></script>
-  <script src="js/jquery.lsxemojipicker.js"></script>
+    <!-- Insert these lines above script imports  -->
+    <script>
+      if (typeof module === 'object') {
+        window.module = module;
+        module = undefined;
+      }
+      if (window.module) module = window.module;
+    </script>
 
-  <!-- Scripts -->
-  <script src="ts-built/go-models.js"></script>
-  <script src="ts-built/go-api.js"></script>
-  <script src="ts-built/app.js"></script>
-  <script src="ts-built/color-fade.js"></script>
-  <script src="ts-built/fluid-motion.js"></script>
-  <script src="ts-built/gradient-factory.js"></script>
-  <script src="ts-built/menu.js"></script>
-  <script src="ts-built/messages.js"></script>
-  <script src="ts-built/tabs.js"></script>
-  <script src="ts-built/notifications.js"></script>
-  <script src="ts-built/emoji-picker.js"></script>
+    <!-- TODO: Remove JQuery as a dependency altogether, replace it with React components -->
+    <!-- JQuery -->
+    <script src="js/jquery-3.2.1.min.js"></script>
 
-</body>
+    <!-- JDenticon -->
+    <script type="text/javascript" src="js/jdenticon-2.1.0.min.js"></script>
+    <script>
+      window.jdenticon_config = {
+        replaceMode: "observe"
+      };
+    </script>
+
+    <!-- Twemoji JS -->
+    <script src="js/twemoji.min.js"></script>
+    <script src="js/jquery.lsxemojipicker.js"></script>
+
+
+    <!-- TODO: Find out if Webpack can bundle js -->
+    <!-- Compiled TS Scripts -->
+    <script src="ts-built/go-models.js"></script>
+    <script src="ts-built/go-api.js"></script>
+    <script src="ts-built/app.js"></script>
+    <script src="ts-built/color-fade.js"></script>
+    <script src="ts-built/fluid-motion.js"></script>
+    <script src="ts-built/gradient-factory.js"></script>
+    <script src="ts-built/menu.js"></script>
+    <script src="ts-built/messages.js"></script>
+    <script src="ts-built/tabs.js"></script>
+    <script src="ts-built/notifications.js"></script>
+    <script src="ts-built/emoji-picker.js"></script>
+  </body>
 
 </html>

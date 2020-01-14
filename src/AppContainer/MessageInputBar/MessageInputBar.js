@@ -21,8 +21,7 @@ const SendMessageButton = () => {
 
 const MessageInput = () => <input id="message-input" type="text" placeholder="TYP." spellCheck="false" />;
 
-
-class MessageInputBar extends Component {
+export default class MessageInputBar extends Component {
     render() {
         return (
             <div className="app__message-input">
@@ -33,6 +32,3 @@ class MessageInputBar extends Component {
         );
     }
 }
-
-
-export default MessageInputBar;
