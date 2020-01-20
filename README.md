@@ -25,7 +25,15 @@ As an ambitious student, oblivious to the headaches that come with projects of t
 
 ### Growing Pains, and Introducing React
 
-As the UI grew in complexity, I started adding more and more functionality that suddenly meant including more tabs, screens, and menus options, etc. My TypeScript code soon became overloaded with unmaintainable code. At this point I realized I would  need of modern framework to accomodate the existing structure if it could ever hope to get bigger. That's when I discovered React, and it's component-driven architectural approach would be the perfect solution.  I decided to commit to learning this new framework and even purchased a course on Udemy, with the intention of rewriting the entire frontend of this project.
+As the UI grew in complexity, more functionality gave rise to more menu options, more tabs and more screens. At one point I was writing code with the job of deleting a HTML section, and replacing it with another HTML section, all for a tab change. I was basically writing my own framework, things only became more chaotic. I was writing myself into a wall of unmaintainable code that would be the project's demise.
+
+At this point I realized I needed a modern framework more organization and structure, that could accomodate the existing project structure.
+
+
+
+That's when I discovered React, with it's component-based architecture was the perfect solution. And because React is a library and not a framework, I could incorporate it in bits and pieces without doing a full project overhaul.
+
+
 
 I divided each part of my UI into manageable chunks.
 
