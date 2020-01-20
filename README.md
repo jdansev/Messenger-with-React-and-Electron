@@ -31,7 +31,7 @@ At this point I realized I needed a modern framework more organization and struc
 
 
 
-That's when I discovered React, with it's component-based architecture was the perfect solution. And because React is a library and not a framework, I could incorporate it in bits and pieces without doing a full project overhaul.
+That's when I discovered React. It's component-based approach was the perfect solution. And because React is a library and not a framework, I could incorporate it in bits and pieces without doing a full project overhaul.
 
 
 
