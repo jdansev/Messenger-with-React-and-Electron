@@ -20,6 +20,8 @@ Backend: Should support real-time chat, storing message histories, registration 
 
 As an ambitious student, oblivious to the headaches that come with projects of this magnitude, I deemed it doable and began this project.
 
+### The Start of the Journey
+
 
 ### Growing Pains, and Introducing React
 
