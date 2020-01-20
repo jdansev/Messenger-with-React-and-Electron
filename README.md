@@ -2,7 +2,7 @@
 
 
 
-# My 3 Year Journey Developing An Instant Messenger From Scratch
+## My 3 Year Journey Developing An Instant Messenger From Scratch
 
 
 The motivation for this project came to me during my senior year of university. Facebook's Messenger was how everyone on campus communicated, and I dared to wonder how challenging would it be to build something similar.
