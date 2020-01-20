@@ -25,7 +25,7 @@ As an ambitious student, oblivious to the headaches that come with projects of t
 
 ### Growing Pains, and Introducing React
 
-As the UI grew in complexity, more functionality gave rise to more menu options, more tabs and more screens. At one point I was writing code with the job of deleting a HTML section, and replacing it with another HTML section, all for a tab change. I was basically writing my own framework, things only became more chaotic. I was writing myself into a wall of unmaintainable code that would be the project's demise.
+As the UI grew in complexity, more functionality gave rise to more menu options, more tabs and more screens. At one point I found myself writing code to delete full HTML sections, then replacing them other HTML sections, all to just change tabs. I was basically writing my own full-fledged framework.
 
 At this point I realized I needed a modern framework more organization and structure, that could accomodate the existing project structure.
 
