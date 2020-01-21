@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import Menu from './Menu/Menu';
-import AppContainer from './AppContainer/AppContainer';
+import Menu from './components/Menu/Menu';
+import AppContainer from './components/AppContainer/AppContainer';
 
 const MenuDimOverlay = () => <div className="menu__dim"></div>;
 

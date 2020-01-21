@@ -45,9 +45,9 @@ window.onload = function () {
     goManager = new GoManager();
     goManager.start();
     goManager.register('Derek Smith', 'derek');
-    hubAlertBadge = new AlertBadge($('#hub-alert-badge'));
+    hubAlertBadge = new AlertBadge($('#hubs-alert-badge'));
     peopleAlertBadge = new AlertBadge($('#people-alert-badge'));
-    notificationAlertBadge = new AlertBadge($('#notification-alert-badge'));
+    notificationAlertBadge = new AlertBadge($('#notifications-alert-badge'));
     emojiPicker = new EmojiPicker($('.emoji-picker'), $('#message-input'));
     emojiPicker.createEmojiPicker();
     /*Dropdown Menu*/

@@ -24,7 +24,7 @@ var emojiPicker: EmojiPicker;
 
 function electronConfig() {
     // set electron zoom
-    const {webFrame} = require('electron');
+    const { webFrame } = require('electron');
     webFrame.setZoomFactor(1);
 }
 
@@ -70,9 +70,9 @@ window.onload = function() {
     goManager.start();
     goManager.register('Derek Smith','derek');
 
-    hubAlertBadge = new AlertBadge($( '#hub-alert-badge' ));
+    hubAlertBadge = new AlertBadge($( '#hubs-alert-badge' ));
     peopleAlertBadge = new AlertBadge($( '#people-alert-badge' ))
-    notificationAlertBadge = new AlertBadge($( '#notification-alert-badge' ));
+    notificationAlertBadge = new AlertBadge($( '#notifications-alert-badge' ));
 
     emojiPicker = new EmojiPicker($( '.emoji-picker' ), $( '#message-input' ));
     emojiPicker.createEmojiPicker();
