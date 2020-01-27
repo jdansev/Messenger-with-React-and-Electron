@@ -7,8 +7,6 @@
 
 The motivation for this project came to me during my senior year of university. Facebook's Messenger was how everyone on campus communicated, and I dared to wonder how challenging would it be to build something similar.
 
-It started as a concept in my head.
-
 Doing some research, it needed two parts--
 
 Frontend: The UI itself, I planned to go all out making the sleekest user experience, complete with a stylish interface, popout menus and satisfying user interactions.
